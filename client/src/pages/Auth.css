@@ -1,0 +1,250 @@
+.auth-container {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.auth-card {
+  background-color: var(--white);
+  border: 1px solid rgba(229, 231, 235, 0.85);
+  border-radius: 16px;
+  box-shadow: 0 16px 42px rgba(31, 41, 55, 0.1);
+  padding: 40px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.auth-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--dark-gray);
+  margin-bottom: 8px;
+}
+
+.auth-subtitle {
+  color: var(--gray);
+  font-size: 16px;
+}
+
+.auth-form {
+  margin-bottom: 20px;
+}
+
+.auth-form .form-group {
+  margin-bottom: 18px;
+}
+
+.auth-field-hint {
+  margin-top: 6px;
+  color: #6b7280;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.auth-field-hint strong {
+  color: #4b5563;
+  font-weight: 600;
+}
+
+.auth-phone-input {
+  display: grid;
+  grid-template-columns: minmax(145px, 1fr) minmax(0, 1.1fr);
+  gap: 9px;
+}
+
+.auth-phone-input .form-select,
+.auth-phone-input .form-input {
+  min-width: 0;
+}
+
+.auth-input-progress {
+  display: block;
+  width: 100%;
+  height: 3px;
+  margin-top: 8px;
+  overflow: hidden;
+  border-radius: 3px;
+  background: #edf0f4;
+  transform-origin: left;
+}
+
+.auth-input-progress::after {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #f59e0b;
+  content: '';
+  transform: scaleX(0.22);
+  transform-origin: left;
+  transition: transform 350ms ease, background-color 250ms ease;
+}
+
+.auth-input-progress.is-complete::after {
+  background: #10b981;
+  transform: scaleX(1);
+}
+
+.auth-input-progress.is-incomplete::after {
+  transform: scaleX(0.55);
+}
+
+.password-guidance {
+  margin-top: 10px;
+  padding: 10px 11px;
+  border: 1px solid #edf0f4;
+  border-radius: 9px;
+  background: #fafbfc;
+}
+
+.password-guidance-track {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 9px;
+}
+
+.password-guidance-track span {
+  height: 4px;
+  flex: 1;
+  border-radius: 4px;
+  background: #e5e7eb;
+  transition: background-color 220ms ease, transform 220ms ease;
+}
+
+.password-guidance-track span.is-met {
+  background: #10b981;
+  transform: scaleY(1.4);
+}
+
+.password-guidance-rules {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  list-style: none;
+}
+
+.password-guidance-rules li {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #6b7280;
+  font-size: 11px;
+  transition: color 180ms ease;
+}
+
+.password-guidance-rules li > span {
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+.password-guidance-rules li.is-met {
+  color: #047857;
+}
+
+.password-guidance-rules li.is-met > span {
+  color: #059669;
+}
+
+.btn-full {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.auth-footer {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.auth-footer p {
+  color: var(--gray);
+  margin: 0;
+}
+
+.auth-footer a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+}
+
+.auth-help-toggle {
+  display: block;
+  margin: 0 auto 16px;
+  padding: 4px;
+  border: 0;
+  background: transparent;
+  color: #b91c1c;
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.auth-help-toggle:hover,
+.auth-help-toggle:focus-visible {
+  text-decoration: underline;
+}
+
+.auth-help-form {
+  margin: 0 0 20px;
+  padding: 16px;
+  border: 1px solid #fee2e2;
+  border-radius: 12px;
+  background: #fffafa;
+}
+
+.auth-help-form > p {
+  margin-bottom: 14px;
+  color: var(--gray);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.auth-help-textarea {
+  min-height: 82px;
+  resize: vertical;
+}
+
+.auth-help-notice {
+  margin-bottom: 14px;
+  padding: 11px 13px;
+  border: 1px solid #a7f3d0;
+  border-radius: 9px;
+  background: #ecfdf5;
+  color: #047857;
+  font-size: 13px;
+}
+
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 30px 20px;
+  }
+
+  .auth-title {
+    font-size: 24px;
+  }
+
+  .auth-phone-input {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .auth-input-progress::after,
+  .password-guidance-track span,
+  .password-guidance-rules li {
+    transition: none;
+  }
+}

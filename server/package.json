@@ -1,0 +1,37 @@
+{
+  "name": "bdcms-server",
+  "version": "1.0.0",
+  "description": "Blood Donation Camp Management System - Backend",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "seed": "node seedDatabase.js",
+    "seed:demo": "node seedDemoData.js",
+    "seed:clear": "node seedDatabase.js --clear",
+    "seed:inventory": "node seedInventory.js",
+    "seed:inventory:clear": "node seedInventory.js --clear"
+  },
+  "keywords": [
+    "blood-donation",
+    "camp-management",
+    "mern"
+  ],
+  "author": "Gautam Kakkar",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.5.0",
+    "morgan": "^1.10.0",
+    "twilio": "^5.10.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

@@ -1,0 +1,100 @@
+.camp-info-header {
+  margin-bottom: 28px;
+}
+
+.camp-info-brand {
+  color: var(--primary-red);
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.camp-info-header .badge {
+  margin-top: 12px;
+  text-transform: capitalize;
+}
+
+.camp-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.camp-info-card {
+  padding: 24px;
+  background: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px var(--shadow);
+}
+
+.camp-info-card-icon {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.camp-info-card h2 {
+  color: var(--dark-gray);
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.camp-info-card p,
+.camp-info-card address {
+  color: var(--gray);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.camp-info-card address {
+  font-style: normal;
+}
+
+.camp-info-card dl {
+  display: grid;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.camp-info-card dl > div {
+  display: grid;
+  grid-template-columns: minmax(120px, 0.7fr) 1fr;
+  gap: 12px;
+}
+
+.camp-info-card dt {
+  color: var(--gray);
+}
+
+.camp-info-card dd {
+  color: var(--dark-gray);
+  font-weight: 600;
+}
+
+.camp-info-card .camp-info-venue {
+  color: var(--dark-gray);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.camp-info-poster-card {
+  grid-column: 1 / -1;
+}
+
+.camp-info-poster-card .camp-poster > img {
+  height: clamp(220px, 36vw, 420px);
+}
+
+@media (max-width: 700px) {
+  .camp-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .camp-info-card dl > div {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .camp-info-poster-card {
+    grid-column: auto;
+  }
+}

@@ -1,0 +1,194 @@
+.list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr));
+  gap: 20px;
+}
+
+.list-card {
+  background-color: var(--white);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px var(--shadow);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.camp-list-card {
+  border: 2px solid transparent;
+}
+
+.camp-list-card.newly-created-camp {
+  border-color: var(--primary-red);
+}
+
+.camp-created-notice {
+  margin: 0 0 14px;
+  color: #047857;
+  font-weight: 600;
+}
+
+.camp-list-card-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 174px;
+  align-items: start;
+  gap: 16px;
+}
+
+.camp-card-side {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  gap: 12px;
+}
+
+.camp-card-side .camp-map-preview {
+  margin-top: 0;
+}
+
+.camp-card-side .camp-poster > img {
+  height: 150px;
+}
+
+.camp-list-card-main {
+  min-width: 0;
+}
+
+.camp-card-qr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--dark-gray);
+  font-size: 12px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.camp-card-qr svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.camp-card-qr:hover {
+  border-color: var(--primary-red);
+  color: var(--primary-red);
+  box-shadow: 0 5px 14px rgba(220, 38, 38, 0.14);
+  transform: translateY(-2px);
+}
+
+.camp-card-qr,
+.camp-card-side .camp-map-thumbnail {
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.list-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px var(--shadow);
+}
+
+.card-badge {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--dark-gray);
+  margin-bottom: 10px;
+}
+
+.card-description {
+  color: var(--gray);
+  font-size: 14px;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.card-info {
+  border-top: 1px solid var(--border);
+  padding-top: 15px;
+  margin-top: 15px;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  color: var(--dark-gray);
+  font-size: 14px;
+}
+
+.info-icon {
+  font-size: 16px;
+  width: 20px;
+}
+
+.blood-group {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--primary-red);
+}
+
+.progress-info {
+  margin-top: 15px;
+}
+
+.progress-text {
+  font-size: 14px;
+  color: var(--gray);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: var(--light-gray);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: var(--primary-red);
+  transition: width 0.3s ease;
+}
+
+.card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .list-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 420px) {
+  .camp-card-qr {
+    padding: 5px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 540px) {
+  .camp-list-card-content {
+    grid-template-columns: 1fr;
+  }
+
+  .camp-card-side {
+    display: grid;
+    grid-template-columns: minmax(96px, 112px) minmax(0, 1fr);
+    align-items: center;
+  }
+}

@@ -1,0 +1,332 @@
+.donor-form {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+.donor-form-intro {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding: 20px 22px;
+  border: 1px solid #fee2e2;
+  border-radius: 14px;
+  background: linear-gradient(110deg, #fff7f7, #fff);
+}
+
+.donor-form-intro-icon {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  place-items: center;
+  border-radius: 14px;
+  background: #fee2e2;
+  font-size: 23px;
+}
+
+.donor-form-intro h2 {
+  margin-bottom: 4px;
+  color: var(--dark-gray);
+  font-size: 17px;
+}
+
+.donor-form-intro p {
+  color: var(--gray);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.donor-form-intro p span {
+  color: var(--primary-red);
+  font-weight: 700;
+}
+
+.donor-form-section {
+  margin-bottom: 18px;
+  padding: 24px 26px;
+  border: 1px solid #e9edf2;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(31, 41, 55, 0.045);
+}
+
+.donor-form-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 14px;
+  margin-bottom: 22px;
+  padding-bottom: 17px;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.donor-form-section-header > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.donor-form-section-header .card-title {
+  font-size: 17px;
+}
+
+.donor-form-section-header p {
+  color: var(--gray);
+  font-size: 13px;
+}
+
+.donor-form-step {
+  display: grid;
+  width: 39px;
+  height: 39px;
+  flex: 0 0 39px;
+  place-items: center;
+  border-radius: 12px;
+  background: #fff1f2;
+  color: var(--primary-red);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px 20px;
+}
+
+.donor-form .form-group {
+  margin-bottom: 4px;
+}
+
+.donor-form .form-label {
+  margin-bottom: 7px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.form-full {
+  grid-column: 1 / -1;
+}
+
+.donor-form .donor-form-actions {
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin: 8px 0 38px;
+  padding: 18px 20px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: #fff;
+}
+
+.donor-form .donor-form-actions p {
+  color: var(--gray);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.form-actions .btn {
+  min-width: 150px;
+}
+
+.donor-profile-card {
+  background-color: var(--white);
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 2px 4px var(--shadow);
+  margin-bottom: 20px;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--border);
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-avatar-wrap {
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.profile-avatar {
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  background-color: var(--primary-red);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-blood-tag {
+  position: absolute;
+  right: -7px;
+  bottom: -4px;
+  padding: 3px 6px;
+  border: 2px solid var(--white);
+  border-radius: 99px;
+  background: var(--primary-red);
+  color: var(--white);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.profile-details h2 {
+  font-size: 24px;
+  color: var(--dark-gray);
+  margin-bottom: 5px;
+}
+
+.profile-role-badge {
+  display: inline-block;
+  margin: 2px 0 7px;
+  padding: 4px 8px;
+  border-radius: 99px;
+  background: #fff1f2;
+  color: #b91c1c;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.profile-manage-link {
+  margin-left: auto;
+  color: var(--primary-red);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.profile-manage-link:hover {
+  text-decoration: underline;
+}
+
+.profile-badge-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.info-section {
+  margin-bottom: 30px;
+}
+
+.section-heading {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--dark-gray);
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.info-item {
+  padding: 12px;
+  background-color: var(--light-gray);
+  border-radius: 5px;
+}
+
+.info-label {
+  font-size: 12px;
+  color: var(--gray);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.info-value {
+  font-size: 16px;
+  color: var(--dark-gray);
+  font-weight: 500;
+}
+
+.eligibility-card {
+  background: linear-gradient(135deg, var(--primary-red), var(--dark-red));
+  color: var(--white);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.eligibility-card.eligible {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.eligibility-card h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.eligibility-card p {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .donor-form-section {
+    padding: 20px 18px;
+  }
+
+  .donor-form .donor-form-actions {
+    align-items: stretch;
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  .donor-form .donor-form-actions .btn {
+    width: 100%;
+  }
+
+  .profile-header {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .profile-info {
+    flex-direction: column;
+  }
+
+  .profile-manage-link {
+    margin-left: 0;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}

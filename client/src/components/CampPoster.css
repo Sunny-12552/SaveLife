@@ -1,0 +1,40 @@
+.camp-poster {
+  width: 100%;
+  min-width: 0;
+  text-align: center;
+}
+
+.camp-poster-source,
+.camp-poster-qr-source {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
+.camp-poster-loading,
+.camp-poster-composite img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 420px;
+  margin: 0 auto;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+.camp-poster-composite {
+  display: inline-block;
+  max-width: 100%;
+  vertical-align: top;
+}
+
+.camp-poster-composite:focus-visible {
+  outline: 2px solid var(--primary-red);
+  outline-offset: 3px;
+}

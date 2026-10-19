@@ -1,0 +1,200 @@
+.camp-details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.camp-details-header > div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.camp-details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.details-card {
+  background-color: var(--white);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px var(--shadow);
+}
+
+.camp-details-image-card {
+  grid-column: 1 / -1;
+}
+
+.camp-details-image-card .camp-poster > img {
+  height: clamp(220px, 36vw, 420px);
+}
+
+.details-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.details-info p {
+  margin: 0;
+  line-height: 1.6;
+  color: var(--dark-gray);
+}
+
+.details-info strong {
+  color: var(--primary-red);
+  margin-right: 8px;
+}
+
+.camp-qr-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background-color: var(--white);
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 2px 4px var(--shadow);
+}
+
+.camp-qr-card p {
+  margin: 0 0 16px;
+  color: var(--gray);
+}
+
+.camp-qr-card canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+.registered-donors-section {
+  margin-top: 40px;
+}
+
+.section-header {
+  margin-bottom: 20px;
+}
+
+.table-container {
+  background-color: var(--white);
+  border-radius: 8px;
+  overflow-x: auto;
+  box-shadow: 0 2px 4px var(--shadow);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  background-color: var(--light-gray);
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  color: var(--dark-gray);
+  border-bottom: 2px solid var(--border);
+}
+
+.table td {
+  padding: 12px;
+  border-bottom: 1px solid var(--border);
+  color: var(--dark-gray);
+}
+
+.table tbody tr:hover {
+  background-color: var(--light-gray);
+}
+
+.blood-group-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background-color: var(--primary-red);
+  color: var(--white);
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.btn-small {
+  padding: 6px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-success {
+  background-color: #10b981;
+  color: var(--white);
+}
+
+.btn-success:hover {
+  background-color: #059669;
+}
+
+.btn-primary {
+  background-color: var(--primary-red);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: var(--dark-red);
+}
+
+.btn-info {
+  background-color: #3b82f6;
+  color: var(--white);
+}
+
+.btn-info:hover {
+  background-color: #2563eb;
+}
+
+.actions-section {
+  background-color: var(--white);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px var(--shadow);
+  margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  .camp-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .camp-qr-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .table-container {
+    overflow-x: scroll;
+  }
+
+  .table {
+    min-width: 800px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .btn-small {
+    width: 100%;
+  }
+}

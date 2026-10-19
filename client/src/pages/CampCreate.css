@@ -1,0 +1,73 @@
+.camp-image-upload {
+  max-width: 100%;
+}
+
+.camp-image-upload-preview {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.camp-image-upload-preview img {
+  display: block;
+  width: min(100%, 360px);
+  max-height: 220px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.camp-image-upload .alert {
+  margin-top: 8px;
+}
+
+.camp-location-permission-note {
+  margin: 0 0 10px;
+  color: var(--gray);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.camp-location-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.camp-location-button > span {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.camp-location-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 9px 0 0;
+  color: var(--gray);
+  font-size: 13px;
+}
+
+.camp-location-spinner {
+  width: 15px;
+  height: 15px;
+  border: 2px solid #fecaca;
+  border-top-color: var(--primary-red);
+  border-radius: 50%;
+  animation: camp-location-spin 700ms linear infinite;
+}
+
+@keyframes camp-location-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .camp-location-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
